@@ -2,7 +2,7 @@ version: '3'
 
 services:
   web:
-    image: 480271108730.dkr.ecr.ap-south-1.amazonaws.com/empulse_web:latest
+    image: your_account_id.dkr.ecr.your_preferred_region.amazonaws.com/app_repo_name:image_tag
     volumes:
       - ../backend:/usr/src/app/
     ports:
@@ -12,7 +12,7 @@ services:
     depends_on:
       - db
   db: 
-    image: 480271108730.dkr.ecr.ap-south-1.amazonaws.com/postgres:latest
+    image: your_account_id.dkr.ecr.your_preferred_region.amazonaws.com/postgres:latest
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
